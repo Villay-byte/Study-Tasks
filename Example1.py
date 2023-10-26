@@ -430,7 +430,7 @@ def recursion(a, b = 0):
         print(a[b])
         recursion(a, b + 1)
     else:
-        print('Конец списка, если выводить больше нечего.')
+        print('Конец списка.')
 
 my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 recursion(my_list)
