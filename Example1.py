@@ -418,3 +418,19 @@ print('____________________________')
 print(k)
 print('____________________________')
 sum(b, k, c)
+
+
+
+
+#example 14
+#task 1
+
+def recursion(a, b = 0):
+    if len(a) > b:
+        print(a[b])
+        recursion(a, b + 1)
+    else:
+        print('Sorry its fine')
+
+my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+recursion(my_list)
