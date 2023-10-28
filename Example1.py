@@ -7,7 +7,7 @@ import random
 
 # 2 semester
 
-# example 3
+# example 3 Ввод-вывод и базовые переменные
 # task 1
 
 a=str(input("Please enter type of enimal "))
@@ -27,7 +27,7 @@ j=str(input("Enter seventh stage "))
 print(d,e,f,g,h,i,j, sep='=>')
 
 
-#example 4
+#example 4 Float, int и арифметические операции
 #task 1
 
 a = float(input('Please enter first side of rectangle: '))
@@ -49,7 +49,7 @@ print(f)
 
 
 
-#example 5
+#example 5 Логические и условные операторы
 #task 1
 
 a = int(input())
@@ -96,7 +96,7 @@ else:
 
 
 
-#example 6
+#example 6 Циклы While и For
 #task 1 
 
 num_zeroes = 0
@@ -132,7 +132,7 @@ print()
 
 
 
-#example 7
+#example 7 Строки
 #task 1 
 
 def palindrome_check(s):
@@ -152,7 +152,7 @@ print(a)
 
 
 
-#example 8
+#example 8 Списки
 #task 1
 
 n = int(input("Please enter desired amount of numbers "))
@@ -195,7 +195,7 @@ print(f'Количество необходимых лодок: {boats}')
 
 
 
-#example 9 
+#example 9 Множества
 #task 1 
 
 n = int(input())
@@ -233,7 +233,7 @@ for i in range(n):
 
 
 
-#example 10
+#example 10 Словари
 #task 1
 
 pets = {}
@@ -273,7 +273,7 @@ print(dict)
 
 
 
-#example 11
+#example 11 Функции
 #task 1
 
 def func(a):
@@ -398,7 +398,7 @@ while command != 'stop':
 
 
 
-#example 13
+#example 13 Двумерные списки
 #task 1
 
 def sum(a, b, c):
@@ -422,7 +422,7 @@ sum(b, k, c)
 
 
 
-#example 14
+#example 14 Рекурсия
 #task 1
 
 def recursion(a, b = 0):
