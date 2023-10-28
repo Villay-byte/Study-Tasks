@@ -434,3 +434,45 @@ def recursion(a, b = 0):
 
 my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 recursion(my_list)
+
+
+
+#Example 15 ООП
+#task 1
+
+class Transport:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+    
+    def output(self):
+        print(f'Name auto: {self.name} speed: {self.max_speed} car mileage: {self.mileage}')
+
+Autobus = Transport('Renaul Logan', 180, 12)
+Gruzovik = Transport('Gaz', 120, 150000)
+Autobus.output()
+Gruzovik.output()
+
+#task 2
+
+class Transport:
+
+    def __init__(self, name, max_speed, mileage):
+
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+ 
+
+    def seating_capacity(self, capacity):
+
+        return f"Вместимость одного автобуса {self.name}: {capacity} пассажиров"
+
+class Autobus(Transport):
+    def seating_capacity(self, capacity = 50):
+        return super().seating_capacity(capacity)
+
+n = Autobus('Renault Logan', 120, 200000)    
+a = n.seating_capacity()
+print(a)
