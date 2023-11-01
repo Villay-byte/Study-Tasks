@@ -132,14 +132,19 @@ print(num_zeroes)
 
 #task 2
 
-amount = 0
-n = int(input())
-f = 0
-for i in range(n):
-   f += 1
-   if n%f == 0:
-       amount += 1
-print(amount + 1)
+def count_divisors(x):
+    count = 0
+    for i in range(1, int(x**0.5) + 1):
+        if x % i == 0:
+            count += 1
+            if i != x // i:
+                count += 1
+    return count
+
+x = int(input("Введите натуральное число X: "))
+result = count_divisors(x)
+print(f"Количество натуральных делителей числа {x} равно {result}")
+
 
 #task 3
 
@@ -149,10 +154,10 @@ f = a
 if a > b:
    print('enter a <= b')
    exit()
-for i in range(a,b+1):
-   f += 1
-   if f%2 == 0:
-       print(f, end=' ')
+if a % 2 != 0:
+    a += 1
+for i in range(a, b+1, 2):
+    print(i, end=" ")
 print()
 
 
