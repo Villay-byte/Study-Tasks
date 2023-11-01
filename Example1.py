@@ -53,30 +53,56 @@ print(res)
 #task 1
 
 a = int(input())
+if a == 0:
+   print('вы ввели "0"')
 if a % 2 == 0:
    if a * (-1) > 0:
-       print('chetnoe otric')
+       print('четное отрицательное')
    elif a * (-1) < 0:
-       print('chetnoe polozh')
-else:
-   print('nechet')
-
+       print('четное положительное')
+elif a % 2 != 0:
+   if a * (-1) > 0:
+      print('нечетное отрицательное')
+   elif a * (-1) < 0:
+      print('нечетное положительное') 
 #task 2
 
-s = str(input("VVEDITE STROKU: "))
+s = str(input("введите строку: "))
 count = 0
 count1 = 0
 vowels = set("aeiouy")
-no_vowels = set('bcdfghjklmnpqrstvwxzy')
+no_vowels = set('bcdfghjklmnpqrstvwxz')
 for letter in s:
-   if letter in vowels:
-       count += 1
-   if letter in no_vowels:
-       count1 += 1
-print("GLASNIH: ")
+    if letter in vowels:
+        vowels += 1
+        if letter == 'a':
+            col_a += 1
+        elif letter == 'e':
+            col_e += 1
+        elif letter == 'i':
+            col_i += 1
+        elif letter == 'o':
+            col_o += 1
+        elif letter == 'u':
+            col_u += 1
+    else:
+        no_vowels += 1
+
+print("гласных: ")
 print(count)
-print("SOGLASNIH: ")
+print("согласных: ")
 print(count1)
+есть_a = col_a > 0
+есть_e = col_e > 0
+есть_i = col_i > 0
+есть_o = col_o > 0
+есть_u = col_u > 0
+
+print(f"Гласных 'a' есть: {есть_a}")
+print(f"Гласных 'e' есть: {есть_e}")
+print(f"Гласных 'i' есть: {есть_i}")
+print(f"Гласных 'o' есть: {есть_o}")
+print(f"Гласных 'u' есть: {есть_u}")
 
 #task 3
 
