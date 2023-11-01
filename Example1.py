@@ -39,14 +39,14 @@ print(a * b)
 
 #task 2 
 
-a = int(input('Please enter 5 digit number(its first digit) '))
-b = int(input('Please enter 5 digit number(its second digit) '))
-c = int(input('Please enter 5 digit number(its third digit) '))
-d = int(input('Please enter 5 digit number(its fourth digit) '))
-e = int(input('Please enter 5 digit number(its fifth digit) '))
-f = ((d**e)*c)/(a-b)
-print(f)
-
+f = int(input())
+e = a % 10 #5
+d = b // 10 #4
+c = (a % 1000) // 100 #3 
+b = (a // 1000) % 10 #2
+a = e // 10 #1
+res = ((d**e)*c)/(a-b)
+print(res)
 
 
 #example 5 Логические и условные операторы
