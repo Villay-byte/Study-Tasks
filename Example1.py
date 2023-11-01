@@ -229,11 +229,9 @@ print(f'Количество необходимых лодок: {boats}')
 #task 1 
 
 n = int(input())
-b = set()
-for i in range(n):
-   a = int(input().split())
-   b.add(a)
-print(len(b))
+b = list(map(int, input().split()))
+c = set(b)
+print(len(c))
 
 #task 2
 
