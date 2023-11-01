@@ -312,7 +312,7 @@ def func(a):
         c.append(b)
     c.reverse()
     print(b)
-    print(*c, sep=', ')
+    print(c)
 a = int(input())
 func(a)
 
