@@ -311,10 +311,10 @@ def func(a):
         b *= i
         c.append(b)
     c.reverse()
-    return(b,c)
-
+    print(b)
+    print(*c, sep=', ')
 a = int(input())
-print(func(a))
+func(a)
 
 #task 2
 
@@ -334,7 +334,7 @@ pets = {
             "Имя владельца": "Саша"
         },
     },
-    и так далее
+    
 }
 
 def create():
@@ -345,7 +345,7 @@ def create():
     age = int(input("Введите возраст питомца: "))
     owner_name = input("Введите имя владельца: ")
 
-    Создаем новую запись
+   
     pets[new_id] = {name: {"Вид питомца": pet_type, "Возраст питомца": age, "Имя владельца": owner_name}}
 
 def read(ID):
@@ -366,7 +366,7 @@ def update(ID):
     new_age = input("Введите новый возраст питомца (если не хотите менять, нажмите Enter): ")
     new_owner_name = input("Введите новое имя владельца (если не хотите менять, нажмите Enter): ")
 
-        Обновляем информацию
+   
     if new_name:
             details["Вид питомца"] = new_name
     if new_pet_type:
@@ -402,7 +402,6 @@ def pets_list():
         print(f'ID: {pet_id}, Имя: {pet_name}, Вид питомца: {details["Вид питомца"]}, Возраст: {details["Возраст питомца"]}, Владелец: {details["Имя владельца"]}')
 
 
-Пример использования:
 
 command = ''
 while command != 'stop':
@@ -420,7 +419,6 @@ while command != 'stop':
         ID = int(input('Введите ID питомца: '))
         delete(ID)
 
-Если пользователь введет "stop", программа завершит работу.
 
 #эту программу признаюсь не сам писал но есть огромное желание понять и разобратся как самому её написать.
 
