@@ -72,9 +72,14 @@ count = 0
 count1 = 0
 vowels = set("aeiouy")
 no_vowels = set('bcdfghjklmnpqrstvwxz')
+col_a = 0
+col_e = 0
+col_i = 0
+col_o = 0
+col_u = 0
 for letter in s:
     if letter in vowels:
-        vowels += 1
+        count += 1
         if letter == 'a':
             col_a += 1
         elif letter == 'e':
@@ -86,23 +91,17 @@ for letter in s:
         elif letter == 'u':
             col_u += 1
     else:
-        no_vowels += 1
+        count1 += 1
 
 print("гласных: ")
 print(count)
 print("согласных: ")
 print(count1)
-есть_a = col_a > 0
-есть_e = col_e > 0
-есть_i = col_i > 0
-есть_o = col_o > 0
-есть_u = col_u > 0
-
-print(f"Гласных 'a' есть: {есть_a}")
-print(f"Гласных 'e' есть: {есть_e}")
-print(f"Гласных 'i' есть: {есть_i}")
-print(f"Гласных 'o' есть: {есть_o}")
-print(f"Гласных 'u' есть: {есть_u}")
+print(f"Гласных 'a' есть: {col_a}")
+print(f"Гласных 'e' есть: {col_e}")
+print(f"Гласных 'i' есть: {col_i}")
+print(f"Гласных 'o' есть: {col_o}")
+print(f"Гласных 'u' есть: {col_u}")
 
 #task 3
 
