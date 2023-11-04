@@ -502,3 +502,115 @@ class Autobus(Transport):
 n = Autobus('Renault Logan', 120, 200000)    
 a = n.seating_capacity()
 print(a)
+
+
+
+#example 16 Классы и объекты
+#task 1
+
+import sys
+class Kassa():
+    def __init__(self):
+        self.amount = 0
+    
+        print(f'Текущий баланс кассы {self.amount} \n')
+    
+    def top_up(self, x):
+        self.amount += x
+        print(f'Ваш баланс счета: {self.amount}')
+
+    def count_1000(self):
+        if self.amount < 1000:
+            print('Колличество тысяч в кассе: 0')
+        else:
+            print(f'Колличество тысяч в кассе: {self.amount // 1000} \n')
+
+    
+    def take_away(self, x):
+        if self.amount >= x:
+            self.amount -= x
+            print(f'Текущий баланс кассы {self.amount} \n')
+        else:
+            print('few deneg v kormane')
+            
+    
+y = Kassa()
+while True:
+    f = int(input('Введите цифру того, что хотите сделать: 1 - Положить деньги на счет, 2 - посмотреть сколько осталось целых тысяч, 3 - снять деньги со счета, 4 - завершить работу с кассой \n'))
+    if f == 1:
+        x = int(input('Сколько желаете положить? \n'))
+        y.top_up(x)
+    elif f == 2:
+        y.count_1000()
+    elif f == 3:
+        x = int(input('Сколько желаете снять? \n'))
+        y.take_away(x)
+    elif f == 4:
+        sys.exit()  
+    
+# task 2
+
+class Turtle():
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+        self.s = 0
+
+    def go_up(self):
+        self.y += self.s
+        print(f'y теперь равен {self.y} \n')
+    def go_down(self):
+        self.y -= self.s
+        print(f'y теперь равен {self.y} \n')
+    def go_left(self):
+        self.x -= self.s
+        print(f'x теперь равен {self.x} \n')
+    def go_right(self):
+        self.x += self.s
+        print(f'x теперь равен {self.x} \n')
+    def evolve(self):
+        self.s += 1
+        print(f's теперь равна {self.s} \n')
+    def degrade(self):
+        if self.s > 1:
+            self.s -= 1
+        else:
+            raise ValueError("Ошибка, s должна быть > 0")
+    def count_moves(self, x2, y2):
+        if self.s == 0:
+            raise ValueError("Ошибка, s должна быть > 0")
+        return ((abs(self.x - x2) // self.s) + (abs(self.y - y2) // self.s))
+
+
+
+k = Turtle()
+
+while True:
+    try:
+        f = int(input('1 - Увеличить y на s   2 - уменьшить y на s   3 - уменьшить x на s   4 - увеличить x на s   5 - увеличить s на 1   6 - уменьшает s на 1   7 - возвращает минимальное количество действий, за которое черепашка сможет добраться до x2 y2 от текущей позиции  8 - Выход из программы\n'))
+        if f == 1:
+            k.go_up()
+        elif f == 2:
+            k.go_down()
+        elif f == 3:
+            k.go_left()
+        elif f == 4:
+            k.go_right()
+        elif f == 5:
+            k.evolve()
+        elif f == 6:
+            k.degrade()
+        elif f == 7:
+            try:
+                x2 = int(input('Введите x2: '))
+                y2 = int(input('Введите y2: '))
+                moves = k.count_moves(x2, y2)
+                print(f'Минимальное количество шагов: {moves}')
+            except ValueError as e:
+                print(e)
+        elif f == 8:
+            break
+        else:
+            print('Неверный ввод. Попробуйте снова.')    
+    except ValueError:
+        print('Неверный ввод. Попробуйте снова.')
