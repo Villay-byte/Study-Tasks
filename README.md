@@ -1,3 +1,2 @@
 # Study-projects
-This is my study projects
-In this repository i public and will all of my study projects, including Python and more.
+Здесь находятся мои учебные проекты в основном на питоне, но может быть в будущем будут проекты и на ява скрипте
